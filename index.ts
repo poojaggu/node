@@ -13,7 +13,7 @@ mongoose
   .then(() => console.log("successs"))
   .catch((err) => console.log(err));
 app.use("/users", userRouter);
-const port = 4500;
+const port = process.env.PORT || 3500;
 
 app.listen(port, () => {
   console.log("success");
